@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="storagehouse">
+    <xs:complexType>
+      <xs:sequence>
+      	<xs:element name="item" maxOccurs="unbounded">
+      	
+      	<xs:complexType>
+          <xs:sequence>
+			<xs:element name="name" type="xs:string"  minOccurs="0"/>
+			<xs:element name="weight" type="xs:float"  minOccurs="0"/>
+			<xs:element name="category" type="xs:string" />
+			<xs:element name="location" minOccurs="0">
+			  <xs:simpleType>
+				<xs:restriction base="xs:string">
+				  <xs:enumeration value="A1" />
+				  <xs:enumeration value="A2" />
+				  <xs:enumeration value="A3" />
+				  <xs:enumeration value="A4" />
+				  <xs:enumeration value="B1" />
+				  <xs:enumeration value="B2" />
+				  <xs:enumeration value="B3" />
+				  <xs:enumeration value="B4" />
+				  <xs:enumeration value="C1" />
+				  <xs:enumeration value="C2" />
+				  <xs:enumeration value="C3" />
+				  <xs:enumeration value="C4" />
+				  <xs:enumeration value="D1" />
+				  <xs:enumeration value="D2" />
+				  <xs:enumeration value="D3" />
+				  <xs:enumeration value="D4" />
+				</xs:restriction>
+			  </xs:simpleType>
+			</xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+      </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<storagehouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+	<item id="c7278e33ef0f4aff88da10dfeeaaae7a">
+		<name>MUTER</name>
+		<weight>0.5</weight>
+		<category>Cables</category>
+		<location>B3</location>
+	</item>
+	<item id="df799fb47bc1e13f3e1c8b04ebd16a96">
+		<name>Dell U2410</name>
+		<weight>2.5</weight>
+		<category>Monitors</category>
+		<location>C2</location>
+	</item>
+	<item id="53abbd89766ea8759b5ebe5bacd43f58">
+		<name>HP Probook 1311</name>
+		<weight>2.1</weight>
+		<category>Notebooks</category>
+		<location>A1</location>
+	</item>
+	<item id="b2b732188cf5b3fd0a669e2c2a5d7ec1">
+		<name>LG TV flat</name>
+		<weight>2.5</weight>
+		<category>TVs</category>
+		<location>D4</location>
+	</item>
+	<item id="6ee811c70927f470e4c8b4a1235c825d">
+		<name>HTC Desire HD</name>
+		<weight>0.3</weight>
+		<category>Phones</category>
+		<location>A3</location>
+	</item>
+	<item id="322050feeb203fdebe419162c560459c">
+		<name>iPhone 4GS</name>
+		<weight>0.3</weight>
+		<category>Phones</category>
+		<location>A3</location>
+	</item>
+	<item id="bcbb46488c3a070834bd85ddca5487a1">
+		<name>MacBook Pro 13"</name>
+		<weight>2</weight>
+		<category>Notebooks</category>
+		<location>B2</location>
+	</item>
+</storagehouse>
