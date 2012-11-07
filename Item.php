@@ -51,6 +51,8 @@ class Item  {
     function setItem($newItem){
         
         $this->mDomEl=$newItem;
+        $this->update();
+        /// Потрібно Update();
         
     }
     function modItem($proper,$value)

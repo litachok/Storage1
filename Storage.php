@@ -65,7 +65,13 @@ class Storage {
     {      
         $this->mItem->remove();    
     }
-
+    
+    function modSet($Name,$Weight,$Category,$Location){
+        $this->mItem->modItem('name',$Name);
+	$this->mItem->modItem('weight',$Weight);
+	$this->mItem->modItem('category',$Category);
+	$this->mItem->modItem('location',$Location);
+    }
  
 }
 

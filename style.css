@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family:Arial, Helvetica, sans-serif;	
+}
+ 
+a{
+	color:#999;
+}
+a:visited {
+	color:#999;
+}
+a:hover {
+	color: #333;
+}
+h1{ font-family:Arial, Helvetica, sans-serif;
+ }
+ h1:hover { color:#999}
+ table.gridtable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+	alignment-adjust:central;
+	text-align:center;
+}
+table.gridtable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
+
+p{
+		
+}
+#items {
+}
+.input {
+	width:20%;
+}
+p{
+	text-align:center;
+}
+
+#buttons {
+	alignment-adjust:central;
+	}
+a{
+	border:thin;
+	border-style:solid;
+	text-decoration:none;
+}
+		
+
+
+

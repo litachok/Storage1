@@ -2,9 +2,9 @@
  <html>
    <?php
         
-        include'Storage.php';
+        include'StoregeClass.php';
        
-       $document= new Storage('./storage.xml','./schema.xsd');
+       $document= new Storege('./storage.xml','./schema.xsd');
    //    $document->addItem('usb', 3, 'A', "C");
     //   $document->setItem('123123wqe', 'usb', 3, 'A', "C1");
     //   $document->setDomEl();
@@ -16,7 +16,7 @@
         //$document->setItem1('12313','name',3 , "b", 'd3');
        
       
-    //   $document->getItemElbyIndex(0);
+       $document->getItemElbyIndex(0);
       //  print $document->mStoreItem->inName;
        // print $document->mStoreItem->inWeight;
         ?>  
@@ -26,7 +26,7 @@
    <title>Index Page</title>
     </head>
     <body>
-    <h1><?php echo $document->mDOMroot->nodeName ?></h1>
+    <h1><?php echo $document->mStoreHouseDOM->documentElement->nodeName ?></h1>
     <table class="gridtable">
       <tr>
           	<th>Modify</th>
@@ -39,10 +39,10 @@
 	  <?php for ($index=0; $index<$document->length; $index+=1){$document->getItemElbyIndex($index); ?>
            <tr>
             <td><?php echo '<a href="modify.php?index='.$index.'" target="new">+</a>'; ?> </td>
-            <td><?php echo $document->mItem->mName;?></td>
-            <td><?php echo $document->mItem->mWeight;?></td>
-            <td><?php echo $document->mItem->mCategory; ?></td>
-            <td><?php echo $document->mItem->mLocation ?></td>
+            <td><?php echo $document->mStoreItem->inName;?></td>
+            <td><?php echo $document->mStoreItem->inWeight;?></td>
+            <td><?php echo $document->mStoreItem->inCategory; ?></td>
+            <td><?php echo $document->mStoreItem->inLocation ?></td>
            </tr> 
 	    <?php }
 		?>
