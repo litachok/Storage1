@@ -24,12 +24,14 @@ class Storage {
     function __construct($xmlsrc, $schemasrc)
     {
         $this->mDOM=new DOMDocument();// В конструктор
+        $this->mPath='./DB';
+
     
-        $this->mDOM->load($xmlsrc);
-        $this->mDOM->schemaValidate($schemasrc);
-        $this->mPath='';
         $this->mSorce=$xmlsrc;
         $this->mSchema=$schemasrc;
+
+        $this->mDOM->load($this->mPath.$this->mSorce);
+        $this->mDOM->schemaValidate($this->mPath.$this->mSchema);
         
         $nodelist=$this->mDOM->getElementsByTagName('item');
         $this->mDOMroot=  $this->mDOM->documentElement;
@@ -46,11 +48,11 @@ class Storage {
        $this->mDOM->save($this->mPath.$this->mSorce); 
     }
     //validate XML Schema check;
-    function validate($schema)
+    function validate()
     {  
-        if($this->mDOM->schemaValidate($schema))
-            return print 'valid';
-        else   return print 'UnValid';
+        if($this->mDOM->schemaValidate($this->mPath.$this->mSchema))
+            return TRUE;
+        else   return FALSE;
     }
       
     //set curent Item by index

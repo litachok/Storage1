@@ -4,11 +4,11 @@
   include 'Storage.php';
   $document= new Storage('./storage.xml','./schema.xsd');
    $text='Submit';
-  // $value=0;
+   $value=0;
    
   if (isset($_GET['index'])&&(($_GET['index'])<$document->length)) { 
       $value = $_GET['index']; $document->getItemElbyIndex($value);
-      echo $value;
+      
 	 $Name=$document->mItem->mName;
 	 $Weight=$document->mItem->mWeight;
 	 $Category=$document->mItem->mCategory;
@@ -16,7 +16,7 @@
 	 }
   elseif (isset($_POST['index'])&&(($_POST['index'])<$document->length)) { 
    $value = $_POST['index']; $document->getItemElbyIndex($value);
-         echo $value;
+         
          $Name=$document->mItem->mName;
 	 $Weight=$document->mItem->mWeight;
 	 $Category=$document->mItem->mCategory;
@@ -37,11 +37,9 @@
 	$Weight = $_POST['weight']; 
 	$Category = $_POST['category']; 
 	$Location = $_POST['location']; 
-	echo $Name.$Weight.$Category.$Location;
 	if ($_POST['formSubmit'] == "Submit") 
 	{ //modify
 	$document->modSet($Name, $Weight, $Category, $Location);
-	echo $value;
 	if ($document->validate('./schema.xsd')) $document->save();
 	else echo '<h1> Do not match Shcema</h1>';
 	} //add
@@ -56,12 +54,10 @@
   }
   
   if (isset($_POST['formRemove'])){
-	// echo $Name;
-    //$value = $_GET['index'];
-      //echo $value;
+	
          $document->getItemElbyIndex($value);
 	 $document->removeItem();
-         //$document->mItem->update();
+        
 	 $document->save();
 	 header("Location: modify.php?index=".++$value.""); 
   }
