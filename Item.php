@@ -1,15 +1,6 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- * Description of Item
- *
- * @author Bevzyuk
- */
 class Item  {
     
     public $mName;
@@ -52,7 +43,7 @@ class Item  {
         
         $this->mDomEl=$newItem;
         $this->update();
-        /// Потрібно Update();
+        /// Update();
         
     }
     function modItem($proper,$value)

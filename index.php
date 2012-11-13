@@ -5,20 +5,7 @@
         include'Storage.php';
        
        $document= new Storage('./storage.xml','./schema.xsd');
-   //    $document->addItem('usb', 3, 'A', "C");
-    //   $document->setItem('123123wqe', 'usb', 3, 'A', "C1");
-    //   $document->setDomEl();
- 
-      
-	//$document->getItemElbyIndex(0);	
-        //$document->mStoreItem->inName; 
-        
-        //$document->setItem1('12313','name',3 , "b", 'd3');
-       
-      
-    //   $document->getItemElbyIndex(0);
-      //  print $document->mStoreItem->inName;
-       // print $document->mStoreItem->inWeight;
+   
         ?>  
    <head>
    <link rel="stylesheet" href="style.css" type="text/css">
